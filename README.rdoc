@@ -10,6 +10,14 @@ Then, within your config/environment.rb:
 
   config.gem 'brightbox-rspec-rails-ext', :lib => 'rspec_rails_extensions', :source => 'http://gems.github.com'
 
+== ActiveRecord::RecordInvalid
+
+If you try to call ActiveRecord::RecordInvalid.new(@my_object) where @my_object is a mock then your exception will not be raised; instead you get a cryptic error.  This is because RecordInvalid expects to be able to call certain methods on your ActiveRecord model, which your mock isn't set up for.  So instead, prepare your mock, like so: 
+
+  @thingy = mock_model Thingy
+  prepare_for_errors_on @thingy
+  raise ActiveRecord::RecordInvalid.new(@thingy)
+
 == Matchers
 
 Some helpful matchers for testing HTTP statuses beyond the default be_success (200 OK)
