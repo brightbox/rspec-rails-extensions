@@ -1,0 +1,56 @@
+= RSpec-Rails Extensions
+
+Some prettifications for RSpec Rails.  
+
+== Matchers
+
+Some helpful matchers for testing HTTP statuses beyond the default be_success (200 OK)
+
+    # looks for a 201 Created (useful for API CREATE calls)
+    response.should be_successfully_created 
+    
+    # expects a Location field with the given URL (useful for API CREATE calls)
+    response.should point_to(url) 
+    
+    # looks for a 422 response (invalid object)
+    response.should be_unprocessable
+    
+    # looks for a 404
+    response.should be_not_found
+    
+    # looks for a 401
+    response.should be_unauthorised
+    
+    # looks for a 500
+    response.should be_an_error
+    
+== Specifying your controllers
+
+One of the issues with writing standard controller specifications, using RSpec's inbuilt mock objects is that the "flow" of your specs feels wrong.  
+
+    it "should display a page for a given thingy" do
+      @thingy = mock_model Thingy
+      Thingy.should_receive(:find).with('1').and_return(@thingy)
+      
+      get :show, :id => '1'
+      
+      response.should be_success
+      response.should render_template('thingies/show')
+    end
+    
+In other words you are setting expectations before you are doing the work - technically correct but it reads wrongly.  
+
+These extra helpers let you write specifications in a more english-like manner.  
+
+    it "should create a new thingy" do
+      @thingy = mock_model Thingy
+      
+      on_getting :show, :id => '1' do
+        Thingy.should_receive(:find).with('1').and_return(@thingy)
+      end
+
+      response.should be_success
+      response.should render_template('thingies/show')
+    end
+    
+Isn't that lovely?
