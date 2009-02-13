@@ -22,23 +22,23 @@ If you try to call ActiveRecord::RecordInvalid.new(@my_object) where @my_object 
 
 Some helpful matchers for testing HTTP statuses beyond the default be_success (200 OK)
 
-    # looks for a 201 Created (useful for API CREATE calls)
-    response.should be_successfully_created 
-    
-    # expects a Location field with the given URL (useful for API CREATE calls)
-    response.should point_to(url) 
-    
-    # looks for a 422 response (invalid object)
-    response.should be_unprocessable
-    
-    # looks for a 404
-    response.should be_not_found
-    
-    # looks for a 401
-    response.should be_unauthorised
-    
-    # looks for a 500
-    response.should be_an_error
+  # looks for a 201 Created (useful for API CREATE calls)
+  response.should be_successfully_created 
+  
+  # expects a Location field with the given URL (useful for API CREATE calls)
+  response.should point_to(url) 
+  
+  # looks for a 422 response (invalid object)
+  response.should be_unprocessable
+  
+  # looks for a 404
+  response.should be_not_found
+  
+  # looks for a 401
+  response.should be_unauthorised
+  
+  # looks for a 500
+  response.should be_an_error
     
 == Specifying your controllers
 
