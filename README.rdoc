@@ -14,8 +14,13 @@ Then, within your spec/spec_helper.rb
 
 If you try to call ActiveRecord::RecordInvalid.new(@my_object) where @my_object is a mock then your exception will not be raised; instead you get a cryptic error.  This is because RecordInvalid expects to be able to call certain methods on your ActiveRecord model, which your mock isn't set up for.  So instead, prepare your mock, like so: 
 
-  @thingy = mock_model Thingy
+  @thingy = mock_model Thingy, :field => 'value'
   prepare_for_errors_on @thingy
+  raise ActiveRecord::RecordInvalid.new(@thingy)
+  
+There's also a short-cut method: 
+
+  @thingy = invalid_model Thingy, :field => 'value'
   raise ActiveRecord::RecordInvalid.new(@thingy)
 
 == Matchers

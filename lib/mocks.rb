@@ -12,6 +12,13 @@ module Spec
         errors.should_receive(:full_messages).and_return([])
         model.should_receive(:errors).and_return(errors)
       end
+
+      # Shortcut to create a mock model that will have ActiveRecord::RecordInvalid
+      def invalid_model class_name, stubs = {}
+        model = mock_model class_name, stubs
+        prepare_for_errors_on model
+        return model
+      end
     end
   end
 end
