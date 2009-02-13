@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2009-02-13}
   s.description = %q{Helpers for prettying up your RSpec-Rails specifications}
   s.email = %q{support@brightbox.co.uk}
-  s.extra_rdoc_files = ["CHANGELOG", "lib/controller_example_group.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "README.rdoc"]
-  s.files = ["CHANGELOG", "lib/controller_example_group.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "LICENCE", "Manifest", "Rakefile", "README.rdoc", "rspec-rails-ext.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "lib/controller_example_group.rb", "lib/mocks.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "README.rdoc"]
+  s.files = ["CHANGELOG", "lib/controller_example_group.rb", "lib/mocks.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "LICENCE", "Manifest", "Rakefile", "README.rdoc", "rspec-rails-ext.gemspec"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/brightbox-rspec-rails-ext}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rspec-rails-ext", "--main", "README.rdoc"]
