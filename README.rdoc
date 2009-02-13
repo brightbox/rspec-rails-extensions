@@ -6,9 +6,9 @@ Some prettifications for RSpec Rails.
 
   sudo gem install brightbox-rspec-rails-ext --source=http://gems.github.com/
   
-Then, within your config/environment.rb: 
+Then, within your spec/spec_helper.rb
 
-  config.gem 'brightbox-rspec-rails-ext', :lib => 'rspec_rails_extensions', :source => 'http://gems.github.com'
+  require 'rspec_rails_extensions'
 
 == ActiveRecord::RecordInvalid
 
