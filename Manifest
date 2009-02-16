@@ -7,3 +7,4 @@ LICENCE
 Manifest
 Rakefile
 README.rdoc
+rspec-rails-ext.gemspec
