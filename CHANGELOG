@@ -1,4 +1,4 @@
-v1.1.0. Pushed a version that actually works (oops, sorry about that)
+v1.6.0. Pushed a version that actually works (oops, sorry about that)
 v1.005. Added invalid_model
 v1.004. Added `rake build`
 v1.003. Added mocks - prepare_for_errors_on
