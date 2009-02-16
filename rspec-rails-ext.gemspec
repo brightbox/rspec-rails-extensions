@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rspec-rails-ext}
-  s.version = "1.0.6"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rahoul Baruah and Caius Durling"]

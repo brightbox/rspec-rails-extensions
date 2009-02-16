@@ -1,7 +1,7 @@
-v1.0.6. Bug fixes
-v1.0.5. Added invalid_model
-v1.0.4. Added `rake build`
-v1.0.3. Added mocks - prepare_for_errors_on
-v1.0.2. Bugfix
-v1.0.1. Bugfix
-v1.0.0. Initial release
+v1.1.0. Pushed a version that actually works (oops, sorry about that)
+v1.005. Added invalid_model
+v1.004. Added `rake build`
+v1.003. Added mocks - prepare_for_errors_on
+v1.002. Bugfix
+v1.001. Bugfix
+v1.000. Initial release
