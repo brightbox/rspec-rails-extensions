@@ -22,6 +22,15 @@ module Spec
         prepare_for_errors_on model
         return model
       end
+      
+      # Shortcut to create a model that will be used in an association
+      # Example: 
+      #   @model = MasterModel.create!
+      #   @mock = associated_model ChildModel, :some => :value
+      #   @model.children << @mock
+      def associated_model class_name, stubs = {}
+        mock_model class_name, stubs.merge(:[]= => true, :save => true)
+      end
     end
   end
 end

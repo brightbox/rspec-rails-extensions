@@ -1,3 +1,4 @@
+v1.6.1. Added associated_model builder
 v1.6.0. Pushed a version that actually works (oops, sorry about that)
 v1.005. Added invalid_model
 v1.004. Added `rake build`
