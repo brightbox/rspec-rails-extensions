@@ -12,6 +12,25 @@ module Spec
         errors.should_receive(:full_messages).and_return([])
         model.should_receive(:errors).and_return(errors)
       end
+    
+      # Shortcut to create a mock model that is prepared for a ActiveRecord::RecordInvalid.new(@model) call
+      # Equivalent to: 
+      #   @model = mock_model Model, :some => :fields
+      #   prepare_for_errors_on @model
+      def invalid_model class_name, stubs = {}
+        model = mock_model class_name, stubs
+        prepare_for_errors_on model
+        return model
+      end
+      
+      # Shortcut to create a model that will be used in an association
+      # Example: 
+      #   @model = MasterModel.create!
+      #   @mock = associated_model ChildModel, :some => :value
+      #   @model.children << @mock
+      def associated_model class_name, stubs = {}
+        mock_model class_name, stubs.merge(:[]= => true, :save => true)
+      end
     end
   end
 end
