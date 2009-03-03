@@ -42,7 +42,7 @@ module ResponseMatchers
 
     # Does the given target object match the required status code?
     def matches? target
-      target.headers['Status'] == @status_code
+      target.status == @status_code
     end
     
     # What do we tell the user when it fails?
