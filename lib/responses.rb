@@ -42,17 +42,20 @@ module ResponseMatchers
 
     # Does the given target object match the required status code?
     def matches? target
-      target.status == @status_code
+      (@target_status = target.status) == @status_code
     end
     
     # What do we tell the user when it fails?
     def failure_message
-      "expected the response to be #{@status_code}"
+      a = <<-EOF
+      expected the location header to be #{@status_code.inspect}
+                          instead it was #{@target_status.inspect}
+      EOF
     end
     
     # What do we tell the user when it shouldn't fail but does
     def negative_failure_message
-      "expected the response to be different to #{@status_code}"
+      "expected the response to be different to #{@status_code.inspect}"
     end
   end
   
@@ -64,17 +67,20 @@ module ResponseMatchers
     
     # Does the given target object match the required location?
     def matches? target
-      target.headers['Location'] == @url
+      (@target_url = target.headers['Location']) == @url
     end
     
     # What do we tell the user when it fails?
     def failure_message
-      "expected the location header to be #{@url}"
+      a = <<-EOF
+      expected the location header to be #{@target_url.inspect}
+                          instead it was #{@url.inspect}
+      EOF
     end
     
     # What do we tell the user when it shouldn't fail but does
     def negative_failure_message
-      "expected the location header to be different to #{@url}"
+      "expected the location header to be different to #{@url.inspect}"
     end
   end
 
