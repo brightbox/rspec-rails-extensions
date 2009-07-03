@@ -3,6 +3,7 @@ lib/controller_example_group.rb
 lib/mocks.rb
 lib/responses.rb
 lib/rspec_rails_extensions.rb
+lib/use_layout.rb
 LICENCE
 Manifest
 Rakefile
