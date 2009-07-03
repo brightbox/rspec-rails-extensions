@@ -44,6 +44,11 @@ Some helpful matchers for testing HTTP statuses beyond the default be_success (2
   
   # looks for a 500
   response.should be_an_error
+  
+Also a helper for testing which layout was used
+
+  # Makes sure it used the "bare" layout
+  response.should use_layout("bare")
     
 == Specifying your controllers
 
