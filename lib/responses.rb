@@ -23,6 +23,11 @@ module ResponseMatchers
   end
   alias :be_unauthorized :be_unauthorised
   
+  # test for a 406 response
+  def be_not_acceptable
+    ResponseStatusMatcher.new "406 Not Acceptable"
+  end
+  
   # test for a 500 internal server error 
   def be_an_error
     ResponseStatusMatcher.new "500 Internal Error"
