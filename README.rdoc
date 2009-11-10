@@ -4,7 +4,7 @@ Some prettifications for RSpec Rails.
 
 == Installation
 
-  sudo gem install brightbox-rspec-rails-ext --source=http://gems.github.com/
+  sudo gem install rspec-rails-ext
   
 Then, within your spec/spec_helper.rb
 
