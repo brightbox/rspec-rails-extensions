@@ -80,3 +80,17 @@ These extra helpers let you write specifications in a more english-like manner.
   end
     
 Isn't that lovely?
+
+== ComparableArray
+
+Ever wanted to check an array contains the right elements, but not cared about the order they were returned? Enter ComparableArray!
+
+  ComparableArray.new([:foo, :bar]).should =~ [:bar, :foo]
+
+And there's even a shorthand for it
+
+  (~[:foo, :bar]).should =~ [:bar, :foo]
+
+It's not required by default, you need to explicity require it.
+
+  require "rspec_rails_extensions/comparable_array"
