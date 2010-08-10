@@ -7,5 +7,7 @@ lib/controller_example_group.rb
 lib/mocks.rb
 lib/responses.rb
 lib/rspec_rails_extensions.rb
+lib/rspec_rails_extensions/comparable_array.rb
 lib/use_layout.rb
 rspec-rails-ext.gemspec
+spec/lib/rspec_rails_extensions/comparable_array_spec.rb

@@ -1,3 +1,4 @@
+v1.8.   Added ComparableArray
 v1.7.1. Added be_not_acceptable
 v1.7.   Added use_layout matcher
 v1.6.3. Changed the output when status/locations don't match
