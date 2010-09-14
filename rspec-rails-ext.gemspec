@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rspec-rails-ext}
-  s.version = "1.8"
+  s.version = "1.8.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rahoul Baruah, Caius Durling"]
-  s.date = %q{2010-08-10}
+  s.date = %q{2010-09-14}
   s.description = %q{Helpers for prettying up your RSpec-Rails specifications}
   s.email = %q{support@brightbox.co.uk}
   s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/controller_example_group.rb", "lib/mocks.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "lib/rspec_rails_extensions/comparable_array.rb", "lib/use_layout.rb"]
