@@ -9,6 +9,10 @@ class ComparableArray
     array.size == other_array.size && array.all? {|e| other_array.include?(e) }
   end
 
+  def inspect
+    array.inspect
+  end
+
   def method_missing method, *args
     if array.respond_to?(method)
       array.send(method, *args)
