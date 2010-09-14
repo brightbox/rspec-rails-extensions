@@ -27,3 +27,12 @@ describe Array do
     end
   end
 end
+
+describe Object do
+  describe "~" do
+    it "should return self" do
+      o = Object.new
+      (~o).should == o
+    end
+  end
+end

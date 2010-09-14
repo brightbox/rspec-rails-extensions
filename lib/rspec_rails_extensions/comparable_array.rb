@@ -29,3 +29,12 @@ module FuzzyArrayExtension
   end
 end
 Array.send(:include, FuzzyArrayExtension)
+
+# Because sometimes we get RspecPositiveMatchers and other objects
+# returned, we just have ~ return self in that situation
+module AddFuzzyMatcherToObject
+  def ~@
+    self
+  end
+end
+Object.send(:include, AddFuzzyMatcherToObject)
