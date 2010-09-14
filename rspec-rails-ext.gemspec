@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Helpers for prettying up your RSpec-Rails specifications}
   s.email = %q{support@brightbox.co.uk}
   s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/controller_example_group.rb", "lib/mocks.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "lib/rspec_rails_extensions/comparable_array.rb", "lib/use_layout.rb"]
-  s.files = ["CHANGELOG", "LICENCE", "Manifest", "README.rdoc", "Rakefile", "lib/controller_example_group.rb", "lib/mocks.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "lib/rspec_rails_extensions/comparable_array.rb", "lib/use_layout.rb", "spec/lib/rspec_rails_extensions/comparable_array_spec.rb", "rspec-rails-ext.gemspec"]
+  s.files = ["CHANGELOG", "LICENCE", "Manifest", "README.rdoc", "Rakefile", "lib/controller_example_group.rb", "lib/mocks.rb", "lib/responses.rb", "lib/rspec_rails_extensions.rb", "lib/rspec_rails_extensions/comparable_array.rb", "lib/use_layout.rb", "rspec-rails-ext.gemspec", "spec/lib/rspec_rails_extensions/comparable_array_spec.rb"]
   s.homepage = %q{http://github.com/brightbox/rspec-rails-extensions/tree/master}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rspec-rails-ext", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
