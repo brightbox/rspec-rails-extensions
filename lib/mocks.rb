@@ -2,19 +2,19 @@ module Spec
   module Rails
     module Mocks
       # Set up the given mock model in preparation for an ActiveRecord::RecordInvalid call
-      # For example: 
+      # For example:
       #   @user = mock_model User
       #   prepare_for_errors_on @user
       #   @user.should_receive(:save!).and_raise(ActiveRecord::RecordInvalid.new(@user))
-      # If you tried this without the call to prepare_for_errors_on, the RecordInvalid exception would not be raised.  
+      # If you tried this without the call to prepare_for_errors_on, the RecordInvalid exception would not be raised.
       def prepare_for_errors_on model
         errors = mock 'errors'
         errors.should_receive(:full_messages).and_return([])
         model.should_receive(:errors).and_return(errors)
       end
-    
+
       # Shortcut to create a mock model that is prepared for a ActiveRecord::RecordInvalid.new(@model) call
-      # Equivalent to: 
+      # Equivalent to:
       #   @model = mock_model Model, :some => :fields
       #   prepare_for_errors_on @model
       def invalid_model class_name, stubs = {}
@@ -22,9 +22,9 @@ module Spec
         prepare_for_errors_on model
         return model
       end
-      
+
       # Shortcut to create a model that will be used in an association
-      # Example: 
+      # Example:
       #   @model = MasterModel.create!
       #   @mock = associated_model ChildModel, :some => :value
       #   @model.children << @mock
