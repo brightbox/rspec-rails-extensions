@@ -1,4 +1,4 @@
-module Spec
+module RSpec
   module Rails
     module Mocks
       # Set up the given mock model in preparation for an ActiveRecord::RecordInvalid call

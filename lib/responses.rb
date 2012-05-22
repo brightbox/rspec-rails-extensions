@@ -4,33 +4,33 @@ Module with a set of matchers for examining ActionController::Response objects
 module ResponseMatchers
   # test for a 201 response
   def be_successfully_created
-    ResponseStatusMatcher.new "201 Created"
+    ResponseStatusMatcher.new 201
   end
 
   # test for a 422 response
   def be_unprocessable
-    ResponseStatusMatcher.new "422 Unprocessable Entity"
+    ResponseStatusMatcher.new 422
   end
 
   # test for a 404 response
   def be_not_found
-    ResponseStatusMatcher.new "404 Not Found"
+    ResponseStatusMatcher.new 404
   end
 
   # test for a 401 response
   def be_unauthorised
-    ResponseStatusMatcher.new "401 Unauthorized"
+    ResponseStatusMatcher.new 401
   end
   alias :be_unauthorized :be_unauthorised
 
   # test for a 406 response
   def be_not_acceptable
-    ResponseStatusMatcher.new "406 Not Acceptable"
+    ResponseStatusMatcher.new 406
   end
 
   # test for a 500 internal server error
   def be_an_error
-    ResponseStatusMatcher.new "500 Internal Error"
+    ResponseStatusMatcher.new 500
   end
 
   # test that the location points to a given URI
